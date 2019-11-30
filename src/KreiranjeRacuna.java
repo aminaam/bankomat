@@ -13,9 +13,17 @@ public class KreiranjeRacuna {
 	}
 	
 	public KreiranjeRacuna(int brojRacuna, String imeVlasnikaRacuna, double iznosNaRacunu) {
-		this.brojRacuna = brojRacuna;
+		if(brojRacuna < 0) {
+			throw new ArithmeticException("Ne smije biti negativan broj!");
+		} else {
+			this.brojRacuna = brojRacuna;
+		}
 		this.imeVlasnikaRacuna = imeVlasnikaRacuna;
-		this.iznosNaRacunu = iznosNaRacunu;
+		if(iznosNaRacunu < 0) {
+			throw new ArithmeticException("Ne smije biti negativan iznos na racunu!");
+		} else {
+			this.iznosNaRacunu = iznosNaRacunu;
+		}
 	}
 	
 	// getteri i setteri
@@ -42,7 +50,4 @@ public class KreiranjeRacuna {
 		public void setIznosNaRacunu(double iznosNaRacunu) {
 			this.iznosNaRacunu = iznosNaRacunu;
 		}
-		
-		
-
 }
