@@ -40,8 +40,8 @@ public class Test {
 
 		for (int i = 0; i < racuni.size(); i++) {
 			racun = racuni.get(i).getBrojRacuna() + "";
-			writer.newLine();
 			writer.write(racun);
+			writer.newLine();
 		}
 
 		writer.close();
