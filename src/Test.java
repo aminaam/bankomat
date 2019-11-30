@@ -34,6 +34,17 @@ public class Test {
 		if (!Files.exists(path)) {
 			Files.createFile(path);
 		}
+		
+		BufferedWriter writer = Files.newBufferedWriter(path);
+		String racun;
+
+		for (int i = 0; i < racuni.size(); i++) {
+			racun = racuni.get(i).getBrojRacuna() + "";
+			writer.newLine();
+			writer.write(racun);
+		}
+
+		writer.close();
 
 		// TRANSFER
 		TransferNovca transfer = new TransferNovca();
