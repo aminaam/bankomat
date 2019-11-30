@@ -50,4 +50,20 @@ public class KreiranjeRacuna {
 		public void setIznosNaRacunu(double iznosNaRacunu) {
 			this.iznosNaRacunu = iznosNaRacunu;
 		}
+		
+		public void isplata(double iznos) {
+			iznosNaRacunu -=iznos;
+		}
+		
+		public void uplata(double iznos) {
+			iznosNaRacunu +=iznos;
+		}
+		
+		public void ispisRacuna() {
+			System.out.println("Racun: \n");
+			System.out.println("Ime vlasnika racuna: " + getImeVlasnikaRacuna());
+			System.out.println("Broj racuna je: " + getBrojRacuna());
+			System.out.println("Stanje na raèunu: " + getIznosNaRacunu() + " KM");
+		}
+		
 }
